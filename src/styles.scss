@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-:root{
+  @font-face {
+  font-family: 'Caveat', cursive;
+  src: url('assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+  :root{
   --dark-grey: #333333;
   --light-grey: #808080;
   --ligth-text: #EDEDED;
@@ -9,9 +17,14 @@
   --yellow: #FFB612;
   --medio-blue: #0000CD;
   --royal-blue: #4169E1;
+  --ligth-Aqua: #00FFFF;
+  --dark-medium-grey: #2c2f3f;
+  --font-cursiva: 'Caveat', cursive;
+  --font-padrao:'Rajdhani', sans-serif;
 }
+
 *{
-  font-family: 'Ubuntu';
+  font-family: var(--font-padrao);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -21,53 +34,10 @@ body{
   width: 100vw;
 }
 
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+ul{
+  list-style: none;
 }
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('assets/fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('assets/fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('assets/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+a{
+  text-decoration: none;
 }
 
-
-@font-face {
-  font-family: 'Dancing';
-  src: url('assets/fonts/Dancing/DancingScript-Regular.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Dancing';
-  src: url('assets/fonts/Dancing/DancingScript-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Dancing';
-  src: url('assets/fonts/Dancing/DancingScript-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Dancing';
-  src: url('assets/fonts/Dancing/DancingScript-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
