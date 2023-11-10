@@ -1,0 +1,18 @@
+nav.menu-lateral{
+position: fixed;
+top: 0px;
+left: 0px;
+width: 300px;
+bottom: 0;
+border: 1px solid;
+background-color: var(--medio-blue);
+overflow-y: auto;
+transition: all ease-in-out 0.5s;
+}
+nav.menu-lateral span.txt-link, span.icon{
+color: var(--ligth-text);
+}
+
+nav.menu-lateral .profile img{
+
+}
