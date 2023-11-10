@@ -1,8 +1,6 @@
-# my-portifolio
-
-# Site onte descrevo toda minha trajetório e habilidades
-
 # MyPortifolio
+
+## Site onte descrevo toda minha trajetório e habilidades
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
