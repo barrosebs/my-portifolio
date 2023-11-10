@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavComponent } from './nav.component';
+import { NavComponent } from './NavComponent';
 
 describe('NavComponent', () => {
   let component: NavComponent;
@@ -8,7 +8,7 @@ describe('NavComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NavComponent]
+      declarations: [NavComponent],
     });
     fixture = TestBed.createComponent(NavComponent);
     component = fixture.componentInstance;
