@@ -1,13 +1,13 @@
 <nav class="menu-lateral-corpo" id="navbar">
   <ul>
     <li class="item-menu action" [ngClass]="{ action: item === 'home' }">
-      <a href="#" (click)="Selected('home')"
+      <a href="#inicio" (click)="Selected('home')"
         ><span class="icon"><i class="fa-solid fa-house"></i></span>
         <span class="txt-link" [hidden]="hidden">Home</span>
       </a>
     </li>
     <li class="item-menu" [ngClass]="{ action: item === 'sobre' }">
-      <a href="#" (click)="Selected('sobre')">
+      <a href="#sobre" (click)="Selected('sobre')">
         <span class="icon"><i class="fa-solid fa-address-card"></i></span>
         <span class="txt-link" [hidden]="hidden">Sobre</span>
       </a>

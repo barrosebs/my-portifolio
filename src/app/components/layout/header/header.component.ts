@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   async toggleMenu() {
     this.menuExpandido = !this.menuExpandido;
     if (this.hidden) {
-      await this.delay(300);
+      await this.delay(200);
       this.hidden = false;
       this.icon = 'fa-light fa-xmark';
     } else {
