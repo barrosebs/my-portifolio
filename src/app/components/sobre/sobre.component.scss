@@ -1,12 +1,18 @@
 .sobre{
-  margin: 60px 0 0 100px;
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+margin: 100px 0 10px 60px;
   padding: 10px;
-  display: flex;
-  gap: 20px;
   max-width: 80%;
+  gap: 60px;
 }
 
-
+.sobre .sobre-top{
+  display: flex;
+  gap: 20px;
+}
 .sobre .sobre-image img{
   width: 300px;
   border-radius: 8px;
@@ -20,14 +26,45 @@ border: 3px solid #c5c5c5;
   -o-transition: width 0.5s ease-out;
   transition: width 0.5s ease-in-out;
 }
-.sobre .sobre-texto{
-  padding: 25px 0 0 20px;
-}
+
 .sobre .sobre-texto h2{
   font-size: 2em;
   font-weight: 700;
+  line-height: 3cap;
+
 }
 .sobre .sobre-texto p{
   font-size: 1.2em;
   letter-spacing: .8px;
+  line-height: 2.5cap;
+}
+.sobre .sobre-perfil{
+  border-top: 2px solid #c7c7c7;
+  padding-top: 30px;
+}
+.sobre .sobre-perfil h4{
+  margin-top: 30px;
+}
+.sobre .sobre-perfil .sobre-mais-informacoes{
+  display: flex;
+  gap: 30px;
+
+  justify-content: space-between;
+  padding: 20px;
+}
+.sobre-rigth .heart-blue{
+  color: #0000ff
+}
+.sobre-rigth .heart-red{
+  color: #ff0000
+}
+.sobre-rigth .heart-white{
+  color: #e3e3e3
+}
+.sobre .sobre-mais-informacoes li{
+
+  margin: 10px 0;
+}
+.sobre .sobre-mais-informacoes .fa-check-square{
+  color: green;
 }
