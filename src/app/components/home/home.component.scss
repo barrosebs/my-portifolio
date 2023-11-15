@@ -15,12 +15,29 @@
   justify-content: center;
   align-items: flex-start;
 }
+.home-header div address{
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+
+}
+.home-header address a{
+  color: var(--ligth-text);
+  text-decoration: none;
+}
+.home-header address a:hover{
+  color: var(--yellow);
+  transition: 1s;
+}
+.home-header address a i{
+padding: 5px;
+}
 .home-header div{
   margin-top: -30vh;
   margin-left: 20vw;
 }
 .home-header div h2{
-  font-size: 3em;
+  font-size: 6em;
   font-weight: 900;
   border-right: 4px solid;
   font-family: monospace;
@@ -28,6 +45,9 @@
   width: 14ch;
   overflow: hidden;
   animation: typing 2s steps(14), blinking 0.5s infinite step-end alternate;
+}
+.home-header div p, a{
+  font-size: 1.3em;
 }
 @keyframes typing {
 from{
