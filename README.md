@@ -1,4 +1,4 @@
-# MyPortifolio
+# MyPortfolio
 
 ## Site onte descrevo toda minha trajetório e habilidades
 
