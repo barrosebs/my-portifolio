@@ -1,0 +1,41 @@
+<div id="carrossel">
+  <div class="carrossel">
+    <div class="gallery-wrapper">
+      <div class="gallery">
+        <!--https://source.unsplash.com/random/250x250/?beach-->
+        <img
+          src="/assets/images/png/asteba.jpg"
+          alt="Asteba Image"
+          class="item current-item"
+        />
+        <img
+          src="/assets/images/png/desafio-smartFit.jpg"
+          alt="Animal Image"
+          class="item"
+        />
+        <img
+          src="/assets/images/png/Screenshot_2.jpg"
+          alt="Nature Image"
+          class="item"
+        />
+        <img
+          src="/assets/images/png/SignalR.jpg"
+          alt="Street Image"
+          class="item"
+        />
+      </div>
+    </div>
+    <div class="navegation">
+      <button class="arrow-left" (click)="controlClick(true)" title="left">
+        <i class="fa-solid fa-circle-arrow-left"></i>
+      </button>
+      <button
+        class="arrow-rigth"
+        aria-label="Next image"
+        (click)="controlClick(false)"
+      >
+        <i class="fa-solid fa-circle-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

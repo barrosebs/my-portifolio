@@ -46,7 +46,7 @@ main{
 }
 main section{
   padding-left: 35px;
-  height: 100vh;
+
 }
 /*Animação*/
 [data-anime]{
@@ -68,4 +68,27 @@ main section{
 [data-anime].animate{
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+@media (max-width:768px){
+  div.menu-lateral {
+    visibility: hidden;
+  }
+}
+.heading{
+  margin-bottom: 60px;
+  width: 100%;
+  max-width: 80%;
+}
+.heading h2{
+  text-align: left;
+  font-size: 3em;
+  font-family: var(--font-cursiva);
+
+}
+.heading .heading-border {
+  display: inline-block;
+  height: 12px;
+  width: 80px;
+  background-color: var( --dark-grey);
+  border-radius: 0px 0 150px 0;
 }

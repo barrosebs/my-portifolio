@@ -1,0 +1,63 @@
+
+.carrossel{
+  position: relative;
+  max-width: 1024px;
+  padding: 15px;
+  margin: 20px 0 auto;
+}
+
+.carrossel .gallery-wrapper{
+  overflow-x: auto;
+  margin: 0 auto;
+}
+.carrossel .gallery{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.carrossel .item{
+  width: 400px;
+  height: 300px;
+  flex-shrink: 0;
+  transition: all 400ms ease-in-out;
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .carrossel .gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.carrossel .gallery-wrapper {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.carrossel .navegation{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  gap: 5px;
+}
+.carrossel .navegation .arrow-left, .arrow-rigth{
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  background-color: var(--medium-text);
+  padding: 5px 5px 2px;
+  border: none;
+  border-radius: 3px;
+}
+.carrossel .navegation .arrow-left:hover, .arrow-rigth:hover{
+  background-color: var(--dark-grey);
+  transition: all 400ms ease-in-out;
+}
+.carrossel .item{
+  opacity: 0.2;
+}
+
+.carrossel .current-item{
+  opacity: 1;
+}
