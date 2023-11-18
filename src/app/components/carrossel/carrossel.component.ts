@@ -18,7 +18,6 @@ export class CarrosselComponent {
     } else {
       this.currentItem += 1;
     }
-    console.log('aqui', isClick, this.currentItem);
 
     if (this.currentItem >= maxItems) {
       debugger;
