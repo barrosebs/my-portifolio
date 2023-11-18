@@ -17,6 +17,7 @@
 }
 
 .carrossel .item{
+  border-radius: 8px;
   width: 400px;
   height: 300px;
   flex-shrink: 0;
@@ -61,3 +62,4 @@
 .carrossel .current-item{
   opacity: 1;
 }
+

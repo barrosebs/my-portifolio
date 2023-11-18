@@ -22,7 +22,7 @@ export class CarrosselComponent {
 
     if (this.currentItem >= maxItems) {
       debugger;
-      this.currentItem = 1;
+      this.currentItem = 0;
     }
     if (this.currentItem < 0) {
       this.currentItem = maxItems - 1;
