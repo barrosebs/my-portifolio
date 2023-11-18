@@ -1,3 +1,7 @@
+#main{
+  display: flex;
+  flex-direction: column;
+}
 .home-header{
   background-image: url('./../../../assets/images/webp/rm373batch9-035.webp');
   background-size: cover;
@@ -61,11 +65,10 @@ from{
   }
 
 }
-#habilidades{
-  padding: 8rem 0rem;
-}
-#portfolio{
-padding: 0;
-background-color: var(--ligth-text);
 
+#portfolio,#habilidades, #curriculo{
+padding: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }

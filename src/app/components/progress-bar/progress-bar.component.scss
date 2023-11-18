@@ -1,8 +1,6 @@
 .progress-bar{
   margin-left: 0;
-  height: 100vh;
   display: flex;
-  background-color: var(--royal-blue);
   align-items: center;
   justify-content: center;
 }
@@ -10,7 +8,6 @@
   position: relative;
   max-width: 80%;
   width: 100%;
-  background-color: var(--ligth-text);
   margin: 0 15px;
   padding: 10px 20px;
   border-radius: 7px;
