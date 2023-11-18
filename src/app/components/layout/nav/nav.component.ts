@@ -19,4 +19,15 @@ export class NavComponent implements OnInit {
       this.btnSelected = true;
     }
   }
+  header = window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.menu');
+    const higth = window.pageYOffset + window.innerHeight * 0.85;
+    console.log(higth);
+    debugger;
+    if (higth > 1200) {
+      navbar?.classList.add('rolagem');
+    } else {
+      navbar?.classList.remove('rolagem');
+    }
+  });
 }

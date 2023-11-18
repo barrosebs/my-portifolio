@@ -1,47 +1,10 @@
-<div
-  class="menu-lateral"
-  [ngClass]="{ expandTrue: menuExpandido, expandFalse: !menuExpandido }"
->
+<app-nav></app-nav>
+<div [ngClass]="{ expandTrue: menuExpandido, expandFalse: !menuExpandido }">
   <aside>
     <section class="profile">
-      <button (click)="toggleMenu()" title="Toggle">
+      <button (click)="toggleMenu()" title="Toggle" hidden="hidden">
         <i [ngClass]="icon" class="fa-solid fa-bars"></i>
       </button>
-      <div class="max-image">
-        <img
-          src="../../../../assets/images/webp/profile_eduardo.webp"
-          alt="Foto do Eduardo"
-        />
-        <h1 [hidden]="hidden">Eduardo Barros</h1>
-        <span [hidden]="hidden">Bacharel em Sistemas de Informação</span>
-      </div>
-      <div class="social-links" [hidden]="hidden">
-        <a
-          href="https://www.linkedin.com/in/barrosebs/"
-          target="_blank"
-          rel="noopener"
-          title="LinkedIn"
-        >
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a
-          href="https://github.com/barrosebs"
-          target="_blank"
-          rel="noopener"
-          title="Git"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/barrosebs/#"
-          target="_blank"
-          rel="noopener"
-          title="Instagram"
-        >
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div>
     </section>
   </aside>
-  <app-nav [hidden]="hidden"></app-nav>
 </div>

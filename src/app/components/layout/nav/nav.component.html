@@ -1,34 +1,44 @@
-<nav class="menu-lateral-corpo" id="navbar">
-  <ul>
-    <li class="item-menu action" [ngClass]="{ action: item === 'home' }">
-      <a href="#inicio" (click)="Selected('home')"
-        ><span class="icon"><i class="fa-solid fa-house"></i></span>
-        <span class="txt-link" [hidden]="hidden">Home</span>
-      </a>
-    </li>
-    <li class="item-menu" [ngClass]="{ action: item === 'sobre' }">
-      <a href="#sobre" (click)="Selected('sobre')">
-        <span class="icon"><i class="fa-solid fa-address-card"></i></span>
-        <span class="txt-link" [hidden]="hidden">Sobre</span>
-      </a>
-    </li>
-    <li class="item-menu" [ngClass]="{ action: item === 'habilidades' }">
-      <a href="#progress-bar" (click)="Selected('habilidades')">
-        <span class="icon"><i class="fa-solid fa-laptop-code"></i></span>
-        <span class="txt-link" [hidden]="hidden">Habilidades</span>
-      </a>
-    </li>
-    <li class="item-menu" [ngClass]="{ action: item === 'curriculo' }">
-      <a href="#curriculo" (click)="Selected('curriculo')">
-        <span class="icon"><i class="fa-regular fa-file-pdf"></i></span>
-        <span class="txt-link" [hidden]="hidden">Currículo</span>
-      </a>
-    </li>
-    <li class="item-menu" [ngClass]="{ action: item === 'portfolio' }">
-      <a href="#portfolio" (click)="Selected('portfolio')">
-        <span class="icon"><i class="fa-solid fa-desktop"></i></span>
-        <span class="txt-link" [hidden]="hidden">Portfólio</span>
-      </a>
-    </li>
-  </ul>
+<nav class="menu" id="menu">
+  <div class="menu-body">
+    <div class="max-image">
+      <img
+        src="../../../../assets/images/webp/profile_eduardo.webp"
+        alt="Foto do Eduardo"
+      />
+    </div>
+    <div>
+      <ul>
+        <li class="item-menu action" [ngClass]="{ action: item === 'home' }">
+          <a href="#inicio" (click)="Selected('home')"
+            ><span class="icon"><i class="fa-solid fa-house"></i></span>
+            <span class="txt-link">Home</span>
+          </a>
+        </li>
+        <li class="item-menu" [ngClass]="{ action: item === 'sobre' }">
+          <a href="#sobre" (click)="Selected('sobre')">
+            <span class="icon"><i class="fa-solid fa-address-card"></i></span>
+            <span class="txt-link">Quem sou</span>
+          </a>
+        </li>
+        <li class="item-menu" [ngClass]="{ action: item === 'habilidades' }">
+          <a href="#habilidades" (click)="Selected('habilidades')">
+            <span class="icon"><i class="fa-solid fa-laptop-code"></i></span>
+            <span class="txt-link">Habilidades</span>
+          </a>
+        </li>
+        <li class="item-menu" [ngClass]="{ action: item === 'curriculo' }">
+          <a href="#curriculo" (click)="Selected('curriculo')">
+            <span class="icon"><i class="fa-regular fa-file-pdf"></i></span>
+            <span class="txt-link">Currículo</span>
+          </a>
+        </li>
+        <li class="item-menu" [ngClass]="{ action: item === 'portfolio' }">
+          <a href="#portfolio" (click)="Selected('portfolio')">
+            <span class="icon"><i class="fa-solid fa-desktop"></i></span>
+            <span class="txt-link">Portfólio</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

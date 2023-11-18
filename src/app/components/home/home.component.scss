@@ -10,14 +10,12 @@
 
   background-attachment: fixed;
   background-position: center;
-
   width: 100%;
   height: 100vh;
   color: var(--ligth-text);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+
 }
 .home-header div address{
   display: block;
@@ -31,15 +29,12 @@
 }
 .home-header address a:hover{
   color: var(--yellow);
-  transition: 1s;
+  transition: 0.5s;
 }
 .home-header address a i{
 padding: 5px;
 }
-.home-header div{
-  margin-top: -30vh;
-  margin-left: 20vw;
-}
+
 .home-header div h2{
   font-size: 6em;
   font-weight: 900;
@@ -71,4 +66,16 @@ padding: 0;
 display: flex;
 flex-direction: column;
 justify-content: center;
+}
+.home-header  .contato{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+ width: 100%;
+ max-width: 50%;
+  margin: 20% auto;
+}
+.social-links ul{
+  display: flex;
+
 }

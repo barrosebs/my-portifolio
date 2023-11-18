@@ -1,34 +1,65 @@
-nav.menu-lateral-corpo{
-  display: flex;
-  flex-direction: column;
-  line-height: 45px;
-}
+.menu{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Um valor alto para garantir que o menu esteja acima dos textos */
+  padding: 15px 0 0 155px;
 
-nav.menu-lateral-corpo .item-menu{
-  margin: 24px;
-  margin-right: 0;
 }
-nav.menu-lateral-corpo .action{
+.menu-body{
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  transition: all 400ms ease-in-out;
+
+}
+.rolagem{
+  background-color: var(--medium-text);
+  transition: all 400ms ease-in-out;
+  margin: 0;
+  .menu-body{
+  margin: 0px;
+  transition: all 400ms ease-in-out;
+
+  }
+}
+.menu-body .max-image{
+  right: 0;
+}
+.menu-body ul{
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 28px 0;
+}
+.menu-body li{
+  width: 130px;
+}
+div.menu-body .action{
   background-color: var(--royal-blue);
   margin-right: 0;
-  //padding: 5px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px ;
+  padding: 8px;
 }
-nav.menu-lateral-corpo .action span.icon{
-  color: var(--ligth-Aqua);
-}
-
-nav.menu-lateral-corpo .item-menu a{
-  color:var( --light-grey);
-  font-size: 24px;
-  gap: 8px;
-}
-
-nav.menu-lateral-corpo a .txt-link, .icon{
-  margin-left: 12px;
-}
-
-nav.menu-lateral-corpo li.action >a{
+div.menu-body li.action >a{
   font-weight: 500;
   color: var(--ligth-text);
+}
+.menu-body a .icon{
+  margin-right: 5px;
+}
+
+div.menu-body .item-menu a{
+  color:var( --light-grey);
+  font-size: 18px;
+  gap: 8px;
+}
+div.max-image img{
+  display: block;
+  width: 80px;
+  height: 80px;
+  border: 4px solid var(--royal-blue);
+  border-radius: 50%;
 }
