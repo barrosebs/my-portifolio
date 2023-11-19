@@ -66,3 +66,13 @@ transition:all 0.5s ease-in-out;
 .sobre .sobre-mais-informacoes .fa-check-square{
   color: green;
 }
+@media (max-width: 768px){
+  .sobre .sobre-top{
+    flex-direction: column;
+    gap: 5px;
+  }
+  .sobre{
+    margin: 4px auto;
+
+  }
+}

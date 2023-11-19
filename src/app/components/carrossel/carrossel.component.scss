@@ -1,9 +1,10 @@
 
 .carrossel{
+  width: 80%;
   position: relative;
-  max-width: 1024px;
+  max-width: 1224px;
   padding: 15px;
-  margin: 20px 0 auto;
+  margin: 0 10%;
 }
 
 .carrossel .gallery-wrapper{
@@ -56,7 +57,7 @@
   transition: all 400ms ease-in-out;
 }
 .carrossel .item{
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .carrossel .current-item{
@@ -67,3 +68,16 @@
   box-shadow: 0px 0px 18px -5px rgba(0, 255, 255, 1);
 }
 
+@media (max-width: 600px){
+  .carrossel{
+    width: 100%;
+    max-width: 345px;
+    padding: 0;
+    margin: 0;
+  }
+  .carrossel .item{
+    width: 200px;
+    height: 200px;
+  }
+
+}
