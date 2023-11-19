@@ -8,7 +8,7 @@ import { expand } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   menuExpandido: boolean = false;
-  hidden = true;
+  hidden = false;
   icon = 'fa-solid fa-bars';
   constructor() {}
   ngOnInit(): void {

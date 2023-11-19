@@ -80,9 +80,24 @@ justify-content: center;
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 360px){
 
   .home-header div h2{
     font-size: 24px;
+  }
+
+  .home-header .contato {
+    position: relative;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    width: 100%;
+    max-width: 80%;
+    top: 350px;
+  }
+div.contato > div > h2{
+    font-size: 34px;
+  }
+  div.contato  > div >p{
+    font-size: 14px;
   }
 }

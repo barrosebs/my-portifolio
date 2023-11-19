@@ -23,6 +23,10 @@
   transition: all 400ms ease-in-out;
 
   }
+  .lista-menu{
+    visibility: hidden;
+    height: 0;
+  }
 }
 .menu-body .max-image{
   right: 0;
@@ -62,4 +66,24 @@ div.max-image img{
   height: 80px;
   border: 4px solid var(--royal-blue);
   border-radius: 50%;
+}
+@media (max-width: 360px){
+.menu{
+  padding:20px 0;
+}
+.menu-body{
+  gap: 0;
+  flex-direction: column;
+
+}
+
+.menu-body ul{
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+}
+.menu-body li{
+  width: 130px;
+}
 }
