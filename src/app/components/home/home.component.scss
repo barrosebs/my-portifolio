@@ -2,6 +2,22 @@
   display: flex;
   flex-direction: column;
 }
+.icon-roletop{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.icon-roletop i{
+  color: var(--medium-text)
+}
+
+.rolagem{
+  background-color: var(--medium-text);
+  transition: all 400ms ease-in-out;
+  margin: 0;
+
+  }
+
 .home-header{
   background-image: url('./../../../assets/images/webp/rm373batch9-035.webp');
   background-size: cover;
