@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SobreComponent {
   dataNascimento: Date = new Date('1977-2-27');
-  hoje = new Date();
   calcularIdade(): number {
     const hoje = new Date();
     const nascimento = new Date(this.dataNascimento);
