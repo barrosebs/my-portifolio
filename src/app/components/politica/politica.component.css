@@ -1,0 +1,12 @@
+.politica{
+  display: flex;
+  flex-direction: column;
+  padding: 150px 40px;
+  margin: 30px;
+}
+.politica >p span {
+  font-size: 18px;
+}
+.politica h2{
+  margin-bottom: 14px;
+}

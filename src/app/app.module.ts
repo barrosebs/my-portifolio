@@ -16,6 +16,7 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
 import { CurriculoComponent } from './components/curriculo/curriculo.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { CarrosselComponent } from './components/carrossel/carrossel.component';
+import { PoliticaComponent } from './components/politica/politica.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CarrosselComponent } from './components/carrossel/carrossel.component';
     CurriculoComponent,
     PortfolioComponent,
     CarrosselComponent,
+    PoliticaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule],
   providers: [],

@@ -38,6 +38,12 @@
             <span class="txt-link">Portfólio</span>
           </a>
         </li>
+        <li class="item-menu" [ngClass]="{ action: item === 'politica' }">
+          <a href="#politica" (click)="Selected('politica')">
+            <span class="icon"><i class="fa-solid fa-landmark"></i></span>
+            <span class="txt-link">Política</span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
