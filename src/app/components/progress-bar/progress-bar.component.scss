@@ -95,10 +95,28 @@ background-image: linear-gradient(90deg, rgba(158, 158, 201, 1) 20%, rgba(38, 38
   background-color: rgba(158, 158, 201, 1);
 background-image: linear-gradient(90deg, rgba(158, 158, 201, 1) 20%, rgba(38, 38, 241, 1) 100%);
 }
-.progress-bar .skill-bar .skill-per.mySql{
-  width: 75%;
+.progress-bar .skill-bar .skill-per.postgreSQL{
+  width: 80%;
   background-color: rgba(158, 158, 201, 1);
-background-image: linear-gradient(90deg, rgba(158, 158, 201, 1) 20%, rgba(38, 38, 241, 1) 100%);
+  background-image: linear-gradient(90deg, rgba(158, 158, 201, 1) 20%, rgba(38, 38, 241, 1) 100%);
+}
+
+.progress-bar .skill-bar .skill-per.aws{
+  width: 70%;
+  background-color: rgba(255, 153, 0, 1);
+  background-image: linear-gradient(90deg, rgba(255, 153, 0, 1) 20%, rgba(255, 102, 0, 1) 100%);
+}
+
+.progress-bar .skill-bar .skill-per.azure{
+  width: 65%;
+  background-color: rgba(0, 120, 215, 1);
+  background-image: linear-gradient(90deg, rgba(0, 120, 215, 1) 20%, rgba(0, 78, 146, 1) 100%);
+}
+
+.progress-bar .skill-bar .skill-per.gcp{
+  width: 60%;
+  background-color: rgba(66, 133, 244, 1);
+  background-image: linear-gradient(90deg, rgba(66, 133, 244, 1) 20%, rgba(52, 168, 83, 1) 100%);
 }
 .progress-bar .skill-bar .skill-per.mongoDb{
   width: 25%;
