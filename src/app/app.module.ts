@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { CurriculoComponent } from './components/curriculo/curriculo.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { CarrosselComponent } from './components/carrossel/carrossel.component';
 import { PoliticaComponent } from './components/politica/politica.component';
+import { ContatoComponent } from './components/contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,9 @@ import { PoliticaComponent } from './components/politica/politica.component';
     PortfolioComponent,
     CarrosselComponent,
     PoliticaComponent,
+    ContatoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

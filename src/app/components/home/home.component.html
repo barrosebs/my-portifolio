@@ -1,60 +1,92 @@
-<main id="main">
-  <div class="icon-roletop">
-    <a href="#inicio" title="rolagem para topo">
-      <i class="fa-solid fa-arrow-up"></i>
+<main id="main" class="futuristic-main">
+  <!-- Scroll to Top Button -->
+  <div class="scroll-to-top" data-anime="scale-up">
+    <a href="#inicio" title="Voltar ao topo" class="scroll-btn">
+      <i class="fa-solid fa-rocket"></i>
     </a>
   </div>
+
+  <!-- Navigation Header -->
   <app-header></app-header>
-  <section id="inicio" class="home-header">
-    <div></div>
-    <div class="contato">
-      <div>
-        <h2>Eduardo Barros</h2>
-        <p>Desenvolvedor, Bacharel Sistemas de Informação, since 2017</p>
-        <address>
-          <a href="mailto:barrosebs@gmail.com">
-            <i class="fa-solid fa-at"></i>barrosebs@gmail.com</a
-          >
-          <br />
-          <a href="https://wa.me/5571996407566">
-            <i class="fa-brands fa-whatsapp"></i>71996407566</a
-          >
-          <div class="social-links">
-            <ul>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/barrosebs/"
-                  target="_blank"
-                  rel="noopener"
-                  title="LinkedIn"
-                >
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/barrosebs"
-                  target="_blank"
-                  rel="noopener"
-                  title="Git"
-                >
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/barrosebs/#"
-                  target="_blank"
-                  rel="noopener"
-                  title="Instagram"
-                >
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </address>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-section">
+    <!-- Animated Background Elements -->
+    <div class="bg-elements">
+      <div class="floating-orb orb-1"></div>
+      <div class="floating-orb orb-2"></div>
+      <div class="floating-orb orb-3"></div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="hero-grid container">
+      <!-- Profile Avatar -->
+      <div class="profile-avatar" data-anime="scale-up">
+        <div class="avatar-container">
+          <img src="../../../../assets/images/webp/profile_eduardo.webp" alt="Eduardo Barros - Desenvolvedor" class="avatar-img">
+          <div class="avatar-glow"></div>
+        </div>
       </div>
+
+      <!-- Main Content -->
+      <div class="hero-content">
+        <div class="intro-text" data-anime="fade-up">
+          <span class="greeting">Olá, eu sou</span>
+          <h1 class="name-title">Eduardo Barros</h1>
+          <h2 class="role-title">Desenvolvedor Full Stack</h2>
+          <p class="description">
+            Bacharel em Sistemas de Informação com mais de 7 anos de experiência 
+            criando soluções digitais inovadoras e interfaces futuristas.
+          </p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions" data-anime="fade-up">
+          <a href="#portfolio" class="btn btn-primary">
+            <span>Ver Projetos</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#sobre" class="btn btn-secondary">
+            <span>Sobre Mim</span>
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-anime="fade-up">
+          <div class="contact-item">
+            <a href="mailto:barrosebs@gmail.com" class="contact-link">
+              <i class="fa-solid fa-envelope"></i>
+              <span>barrosebs@gmail.com</span>
+            </a>
+          </div>
+          <div class="contact-item">
+            <a href="https://wa.me/5571996407566" class="contact-link">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>+55 71 99640-7566</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links" data-anime="fade-up">
+          <a href="https://www.linkedin.com/in/barrosebs/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/barrosebs" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.instagram.com/barrosebs/" target="_blank" rel="noopener" class="social-link" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" data-anime="fade-up">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Role para explorar</span>
     </div>
   </section>
   <section id="sobre">
@@ -68,6 +100,9 @@
   </section>
   <section id="portfolio">
     <app-portfolio></app-portfolio>
+  </section>
+  <section id="contato">
+    <app-contato></app-contato>
   </section>
   <section id="politica">
     <app-politica></app-politica>

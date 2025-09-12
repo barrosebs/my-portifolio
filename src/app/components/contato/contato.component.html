@@ -1,0 +1,240 @@
+<div class="futuristic-contact" id="contato">
+  <!-- Background Effects -->
+  <div class="contact-background">
+    <div class="grid-overlay"></div>
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Header Section -->
+    <div class="contact-header" data-anime="fade-up">
+      <h2 class="section-title">
+        <span class="title-gradient">Entre em Contato</span>
+        <div class="title-glow"></div>
+      </h2>
+      <p class="section-subtitle">
+        Vamos transformar suas ideias em realidade digital
+      </p>
+    </div>
+
+    <div class="contact-content">
+      <!-- Contact Information -->
+      <div class="contact-info-section" data-anime="fade-left">
+        <div class="info-card">
+          <div class="card-header">
+            <i class="fas fa-address-card"></i>
+            <h3>Informações de Contato</h3>
+          </div>
+          
+          <div class="contact-methods">
+            <!-- Email -->
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="method-info">
+                <h4>Email</h4>
+                <a href="mailto:barrosebs@gmail.com" class="contact-link">
+                  barrosebs@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Telefone -->
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="method-info">
+                <h4>Telefone</h4>
+                <a href="tel:+5571996407566" class="contact-link">
+                  +55 (71) 99640-7566
+                </a>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="method-info">
+                <h4>WhatsApp</h4>
+                <a href="https://wa.me/5571996407566" target="_blank" class="contact-link">
+                  +55 (71) 99640-7566
+                </a>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="method-info">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/barrosebs/" target="_blank" class="contact-link">
+                  /in/barrosebs
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="method-info">
+                <h4>GitHub</h4>
+                <a href="https://github.com/barrosebs" target="_blank" class="contact-link">
+                  /barrosebs
+                </a>
+              </div>
+            </div>
+
+            <!-- Localização -->
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="method-info">
+                <h4>Localização</h4>
+                <span class="location-text">
+                  Salvador, Bahia - Brasil
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Networks -->
+        <div class="social-networks">
+          <h4>Redes Sociais</h4>
+          <div class="social-grid">
+            <a href="https://www.linkedin.com/in/barrosebs/" target="_blank" class="social-card linkedin">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/barrosebs" target="_blank" class="social-card github">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://wa.me/5571996407566" target="_blank" class="social-card whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:barrosebs@gmail.com" class="social-card email">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-section" data-anime="fade-right">
+        <div class="form-card">
+          <div class="card-header">
+            <i class="fas fa-paper-plane"></i>
+            <h3>Envie uma Mensagem</h3>
+          </div>
+          
+          <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="name">Nome Completo</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="formData.name"
+                required 
+                class="form-control"
+                placeholder="Seu nome completo"
+              >
+              <div class="input-glow"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                [(ngModel)]="formData.email"
+                required 
+                class="form-control"
+                placeholder="seu@email.com"
+              >
+              <div class="input-glow"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                [(ngModel)]="formData.subject"
+                required 
+                class="form-control"
+                placeholder="Assunto da mensagem"
+              >
+              <div class="input-glow"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                [(ngModel)]="formData.message"
+                required 
+                class="form-control"
+                rows="5"
+                placeholder="Descreva seu projeto ou dúvida..."
+              ></textarea>
+              <div class="input-glow"></div>
+            </div>
+
+            <button type="submit" class="submit-btn" [disabled]="!contactForm.valid">
+              <span class="btn-text">Enviar Mensagem</span>
+              <i class="fas fa-rocket"></i>
+              <div class="btn-glow"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions" data-anime="fade-up">
+      <h4>Ações Rápidas</h4>
+      <div class="actions-grid">
+        <a href="https://wa.me/5571996407566?text=Olá! Vi seu portfólio e gostaria de conversar sobre um projeto." 
+           target="_blank" 
+           class="action-card whatsapp-action">
+          <i class="fab fa-whatsapp"></i>
+          <span>Conversar no WhatsApp</span>
+        </a>
+        
+        <a href="mailto:barrosebs@gmail.com?subject=Contato via Portfólio&body=Olá Eduardo, vi seu portfólio e gostaria de conversar sobre..." 
+           class="action-card email-action">
+          <i class="fas fa-envelope"></i>
+          <span>Enviar Email Direto</span>
+        </a>
+        
+        <a href="#curriculo" 
+           class="action-card cv-action">
+          <i class="fas fa-download"></i>
+          <span>Baixar Currículo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

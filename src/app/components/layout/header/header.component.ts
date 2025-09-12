@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { expand } from 'rxjs';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,25 +6,46 @@ import { expand } from 'rxjs';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  menuExpandido: boolean = false;
-  hidden = false;
-  icon = 'fa-solid fa-bars';
+  expandir: boolean = false;
+
   constructor() {}
+
   ngOnInit(): void {
-    //throw new Error('Method not implemented.');
+    // Component initialization
   }
-  async delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-  async toggleMenu() {
-    this.menuExpandido = !this.menuExpandido;
-    if (this.hidden) {
-      await this.delay(200);
-      this.hidden = false;
-      this.icon = 'fa-light fa-xmark';
-    } else {
-      this.hidden = true;
-      this.icon = 'fa-solid fa-bars';
+
+  @HostListener('window:resize', [])
+  onWindowResize(): void {
+    // Close mobile menu on resize to desktop
+    if (window.innerWidth > 768) {
+      this.expandir = false;
+      document.body.style.overflow = '';
     }
+  }
+
+  expandirMenu(): void {
+    this.expandir = !this.expandir;
+    
+    // Prevent body scroll when mobile menu is open
+    if (this.expandir) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Smooth scroll to section
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    
+    // Close mobile menu after navigation
+    this.expandir = false;
+    document.body.style.overflow = '';
   }
 }

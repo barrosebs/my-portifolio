@@ -1,47 +1,127 @@
-<nav class="menu" id="menu">
-  <div class="menu-body">
-    <div class="max-image">
-      <img
-        src="../../../../assets/images/webp/profile_eduardo.webp"
-        alt="Foto do Eduardo"
-      />
+<nav class="futuristic-nav" id="menu" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <!-- Logo/Brand -->
+    <div class="nav-brand" data-anime="fade-right">
+      <div class="brand-avatar">
+        <img
+          src="../../../../assets/images/webp/profile_eduardo.webp"
+          alt="Eduardo Barros - Desenvolvedor"
+          class="brand-img"
+        />
+        <div class="brand-glow"></div>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Eduardo</span>
+        <span class="brand-title">Developer</span>
+      </div>
     </div>
-    <div class="lista-menu">
-      <ul>
-        <li class="item-menu action" [ngClass]="{ action: item === 'home' }">
-          <a href="#inicio" (click)="Selected('home')"
-            ><span class="icon"><i class="fa-solid fa-house"></i></span>
-            <span class="txt-link">Home</span>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu" data-anime="fade-left">
+      <ul class="menu-list">
+        <li class="menu-item" [class.active]="item === 'home'">
+          <a href="#inicio" (click)="Selected('home')" class="menu-link">
+            <span class="menu-icon">
+              <i class="fa-solid fa-house"></i>
+            </span>
+            <span class="menu-text">Home</span>
+            <div class="menu-indicator"></div>
           </a>
         </li>
-        <li class="item-menu" [ngClass]="{ action: item === 'sobre' }">
-          <a href="#sobre" (click)="Selected('sobre')">
-            <span class="icon"><i class="fa-solid fa-address-card"></i></span>
-            <span class="txt-link">Quem sou</span>
+        <li class="menu-item" [class.active]="item === 'sobre'">
+          <a href="#sobre" (click)="Selected('sobre')" class="menu-link">
+            <span class="menu-icon">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <span class="menu-text">Sobre</span>
+            <div class="menu-indicator"></div>
           </a>
         </li>
-        <li class="item-menu" [ngClass]="{ action: item === 'habilidades' }">
-          <a href="#habilidades" (click)="Selected('habilidades')">
-            <span class="icon"><i class="fa-solid fa-laptop-code"></i></span>
-            <span class="txt-link">Habilidades</span>
+        <li class="menu-item" [class.active]="item === 'habilidades'">
+          <a href="#habilidades" (click)="Selected('habilidades')" class="menu-link">
+            <span class="menu-icon">
+              <i class="fa-solid fa-code"></i>
+            </span>
+            <span class="menu-text">Skills</span>
+            <div class="menu-indicator"></div>
           </a>
         </li>
-        <li class="item-menu" [ngClass]="{ action: item === 'curriculo' }">
-          <a href="#curriculo" (click)="Selected('curriculo')">
-            <span class="icon"><i class="fa-regular fa-file-pdf"></i></span>
-            <span class="txt-link">Currículo</span>
+        <li class="menu-item" [class.active]="item === 'curriculo'">
+          <a href="#curriculo" (click)="Selected('curriculo')" class="menu-link">
+            <span class="menu-icon">
+              <i class="fa-solid fa-file-lines"></i>
+            </span>
+            <span class="menu-text">Currículo</span>
+            <div class="menu-indicator"></div>
           </a>
         </li>
-        <li class="item-menu" [ngClass]="{ action: item === 'portfolio' }">
-          <a href="#portfolio" (click)="Selected('portfolio')">
-            <span class="icon"><i class="fa-solid fa-desktop"></i></span>
-            <span class="txt-link">Portfólio</span>
+        <li class="menu-item" [class.active]="item === 'portfolio'">
+          <a href="#portfolio" (click)="Selected('portfolio')" class="menu-link">
+            <span class="menu-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </span>
+            <span class="menu-text">Projetos</span>
+            <div class="menu-indicator"></div>
           </a>
         </li>
-        <li class="item-menu" [ngClass]="{ action: item === 'politica' }">
-          <a href="#politica" (click)="Selected('politica')">
-            <span class="icon"><i class="fa-solid fa-landmark"></i></span>
-            <span class="txt-link">Política</span>
+        <li class="menu-item" [class.active]="item === 'contato'">
+          <a href="#contato" (click)="Selected('contato')" class="menu-link">
+            <span class="menu-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <span class="menu-text">Contato</span>
+            <div class="menu-indicator"></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-toggle" (click)="toggleMobileMenu()" data-anime="scale-up">
+      <span class="toggle-line" [class.active]="mobileMenuOpen"></span>
+      <span class="toggle-line" [class.active]="mobileMenuOpen"></span>
+      <span class="toggle-line" [class.active]="mobileMenuOpen"></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" [class.active]="mobileMenuOpen" (click)="closeMobileMenu()">
+    <div class="mobile-menu" [class.active]="mobileMenuOpen">
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item" [class.active]="item === 'home'">
+          <a href="#inicio" (click)="Selected('home'); closeMobileMenu()" class="mobile-menu-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="mobile-menu-item" [class.active]="item === 'sobre'">
+          <a href="#sobre" (click)="Selected('sobre'); closeMobileMenu()" class="mobile-menu-link">
+            <i class="fa-solid fa-user"></i>
+            <span>Sobre</span>
+          </a>
+        </li>
+        <li class="mobile-menu-item" [class.active]="item === 'habilidades'">
+          <a href="#habilidades" (click)="Selected('habilidades'); closeMobileMenu()" class="mobile-menu-link">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+        </li>
+        <li class="mobile-menu-item" [class.active]="item === 'curriculo'">
+          <a href="#curriculo" (click)="Selected('curriculo'); closeMobileMenu()" class="mobile-menu-link">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Currículo</span>
+          </a>
+        </li>
+        <li class="mobile-menu-item" [class.active]="item === 'portfolio'">
+          <a href="#portfolio" (click)="Selected('portfolio'); closeMobileMenu()" class="mobile-menu-link">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Projetos</span>
+          </a>
+        </li>
+        <li class="mobile-menu-item" [class.active]="item === 'contato'">
+          <a href="#contato" (click)="Selected('contato'); closeMobileMenu()" class="mobile-menu-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contato</span>
           </a>
         </li>
       </ul>

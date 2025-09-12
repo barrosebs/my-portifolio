@@ -1,10 +1,107 @@
-<div [ngClass]="{ expandTrue: menuExpandido, expandFalse: !menuExpandido }">
-  <aside>
-    <section class="profile">
-      <button (click)="toggleMenu()" title="Toggle" hidden="hidden">
-        <i [ngClass]="icon" class="fa-solid fa-bars"></i>
-      </button>
-    </section>
-  </aside>
+<div class="futuristic-header" [class.expanded]="expandir">
+  <!-- Background Elements -->
+  <div class="header-bg">
+    <div class="bg-grid"></div>
+    <div class="bg-particles"></div>
+  </div>
+  
+  <!-- Main Header Content -->
+  <div class="header-content">
+    <!-- Mobile Menu Button -->
+    <button 
+      class="mobile-menu-btn" 
+      (click)="expandirMenu()"
+      [class.active]="expandir"
+      data-anime="scale-up"
+    >
+      <span class="btn-line"></span>
+      <span class="btn-line"></span>
+      <span class="btn-line"></span>
+      <div class="btn-glow"></div>
+    </button>
+    
+    <!-- Navigation Component -->
+    <app-nav [hidden]="expandir"></app-nav>
+  </div>
+  
+  <!-- Sidebar for Mobile -->
+  <div class="mobile-sidebar" [class.active]="expandir">
+    <div class="sidebar-overlay" (click)="expandirMenu()"></div>
+    <div class="sidebar-content">
+      <div class="sidebar-header">
+        <div class="profile-section">
+          <div class="profile-avatar">
+            <img 
+              src="../../../../assets/images/webp/profile_eduardo.webp" 
+              alt="Eduardo Barros"
+              class="profile-img"
+            />
+            <div class="avatar-glow"></div>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">Eduardo Barros</h3>
+            <p class="profile-title">Full Stack Developer</p>
+          </div>
+        </div>
+        <button class="close-btn" (click)="expandirMenu()">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link" (click)="expandirMenu()">
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#sobre" class="nav-link" (click)="expandirMenu()">
+              <i class="fa-solid fa-user"></i>
+              <span>Sobre</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#habilidades" class="nav-link" (click)="expandirMenu()">
+              <i class="fa-solid fa-code"></i>
+              <span>Habilidades</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#curriculo" class="nav-link" (click)="expandirMenu()">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>Currículo</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link" (click)="expandirMenu()">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Projetos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contato" class="nav-link" (click)="expandirMenu()">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Contato</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<app-nav></app-nav>
