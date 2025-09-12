@@ -7,12 +7,16 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    children: [
-      { path: 'sobre', component: SobreComponent },
-      { path: 'footer', component: FooterComponent },
-    ],
+    component: HomeComponent
   },
+  {
+    path: 'sobre',
+    component: SobreComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({

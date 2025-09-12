@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/geral.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -95,10 +97,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/geral.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0177843d-4ad1-4207-914d-8e17f2185b9e"
   }
 }
