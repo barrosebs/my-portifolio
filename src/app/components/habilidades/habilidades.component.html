@@ -1,6 +1,6 @@
 <section class="futuristic-skills" id="habilidades">
   <!-- Background Elements -->
-  <div class="skills-background">
+  <div class="skills-background" aria-hidden="true">
     <div class="grid-overlay"></div>
     <div class="floating-particles">
       <div class="particle" *ngFor="let i of [1,2,3,4,5,6,7,8]"></div>
@@ -9,7 +9,7 @@
 
   <div class="skills-container">
     <!-- Section Header -->
-    <div class="skills-header" data-anime="up">
+    <header class="skills-header" data-anime="up">
       <div class="header-content">
         <span class="section-label">Competências Técnicas</span>
         <h2 class="section-title">
@@ -21,30 +21,31 @@
           sempre buscando excelência e inovação em cada projeto.
         </p>
       </div>
-      <div class="header-glow"></div>
-    </div>
+      <div class="header-glow" aria-hidden="true"></div>
+    </header>
 
     <!-- Skills Categories -->
     <div class="skills-categories">
       <!-- Frontend Skills -->
-      <div class="skill-category" data-anime="left">
-        <div class="category-header">
-          <div class="category-icon">
+      <article class="skill-category" data-anime="left">
+        <header class="category-header">
+          <div class="category-icon" aria-hidden="true">
             <i class="fa-solid fa-code"></i>
           </div>
           <h3 class="category-title">Frontend</h3>
-          <div class="category-line"></div>
-        </div>
+          <div class="category-line" aria-hidden="true"></div>
+        </header>
         <div class="skills-grid">
           <div class="skill-card" *ngFor="let skill of frontendSkills">
             <div class="skill-content">
-              <div class="skill-icon">
+              <div class="skill-icon" aria-hidden="true">
                 <i [class]="skill.icon"></i>
               </div>
               <div class="skill-info">
                 <h4 class="skill-name">{{ skill.name }}</h4>
                 <div class="skill-level">
-                  <div class="level-bar">
+                  <div class="level-bar" role="progressbar" [attr.aria-valuenow]="skill.level" 
+                       aria-valuemin="0" aria-valuemax="100" [attr.aria-label]="'Nível de ' + skill.name + ': ' + skill.level + '%'">
                     <div class="level-fill" [style.width.%]="skill.level"></div>
                   </div>
                   <span class="level-text">{{ skill.level }}%</span>
@@ -54,7 +55,7 @@
             <div class="skill-glow"></div>
           </div>
         </div>
-      </div>
+      </article>
 
       <!-- Backend Skills -->
       <div class="skill-category" data-anime="up">

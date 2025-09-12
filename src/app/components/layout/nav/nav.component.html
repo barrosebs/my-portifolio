@@ -1,87 +1,88 @@
-<nav class="futuristic-nav" id="menu" [class.scrolled]="isScrolled">
+<nav class="futuristic-nav" id="menu" [class.scrolled]="isScrolled" role="navigation" aria-label="Menu principal">
   <div class="nav-container">
     <!-- Logo/Brand -->
-    <div class="nav-brand" data-anime="fade-right">
-      <div class="brand-avatar">
+    <header class="nav-brand" data-anime="fade-right">
+      <figure class="brand-avatar">
         <img
           src="../../../../assets/images/webp/profile_eduardo.webp"
           alt="Eduardo Barros - Desenvolvedor"
           class="brand-img"
         />
-        <div class="brand-glow"></div>
-      </div>
+        <div class="brand-glow" aria-hidden="true"></div>
+      </figure>
       <div class="brand-text">
         <span class="brand-name">Eduardo</span>
         <span class="brand-title">Developer</span>
       </div>
-    </div>
+    </header>
 
     <!-- Navigation Menu -->
     <div class="nav-menu" data-anime="fade-left">
-      <ul class="menu-list">
-        <li class="menu-item" [class.active]="item === 'home'">
-          <a href="#inicio" (click)="Selected('home')" class="menu-link">
-            <span class="menu-icon">
+      <ul class="menu-list" role="menubar">
+        <li class="menu-item" [class.active]="item === 'home'" role="none">
+          <a href="#inicio" (click)="Selected('home')" class="menu-link" role="menuitem">
+            <span class="menu-icon" aria-hidden="true">
               <i class="fa-solid fa-house"></i>
             </span>
             <span class="menu-text">Home</span>
-            <div class="menu-indicator"></div>
+            <div class="menu-indicator" aria-hidden="true"></div>
           </a>
         </li>
-        <li class="menu-item" [class.active]="item === 'sobre'">
-          <a href="#sobre" (click)="Selected('sobre')" class="menu-link">
-            <span class="menu-icon">
+        <li class="menu-item" [class.active]="item === 'sobre'" role="none">
+          <a href="#sobre" (click)="Selected('sobre')" class="menu-link" role="menuitem">
+            <span class="menu-icon" aria-hidden="true">
               <i class="fa-solid fa-user"></i>
             </span>
             <span class="menu-text">Sobre</span>
-            <div class="menu-indicator"></div>
+            <div class="menu-indicator" aria-hidden="true"></div>
           </a>
         </li>
-        <li class="menu-item" [class.active]="item === 'habilidades'">
-          <a href="#habilidades" (click)="Selected('habilidades')" class="menu-link">
-            <span class="menu-icon">
+        <li class="menu-item" [class.active]="item === 'habilidades'" role="none">
+          <a href="#habilidades" (click)="Selected('habilidades')" class="menu-link" role="menuitem">
+            <span class="menu-icon" aria-hidden="true">
               <i class="fa-solid fa-code"></i>
             </span>
             <span class="menu-text">Skills</span>
-            <div class="menu-indicator"></div>
+            <div class="menu-indicator" aria-hidden="true"></div>
           </a>
         </li>
-        <li class="menu-item" [class.active]="item === 'curriculo'">
-          <a href="#curriculo" (click)="Selected('curriculo')" class="menu-link">
-            <span class="menu-icon">
+        <li class="menu-item" [class.active]="item === 'curriculo'" role="none">
+          <a href="#curriculo" (click)="Selected('curriculo')" class="menu-link" role="menuitem">
+            <span class="menu-icon" aria-hidden="true">
               <i class="fa-solid fa-file-lines"></i>
             </span>
             <span class="menu-text">Currículo</span>
-            <div class="menu-indicator"></div>
+            <div class="menu-indicator" aria-hidden="true"></div>
           </a>
         </li>
-        <li class="menu-item" [class.active]="item === 'portfolio'">
-          <a href="#portfolio" (click)="Selected('portfolio')" class="menu-link">
-            <span class="menu-icon">
+        <li class="menu-item" [class.active]="item === 'portfolio'" role="none">
+          <a href="#portfolio" (click)="Selected('portfolio')" class="menu-link" role="menuitem">
+            <span class="menu-icon" aria-hidden="true">
               <i class="fa-solid fa-briefcase"></i>
             </span>
             <span class="menu-text">Projetos</span>
-            <div class="menu-indicator"></div>
+            <div class="menu-indicator" aria-hidden="true"></div>
           </a>
         </li>
-        <li class="menu-item" [class.active]="item === 'contato'">
-          <a href="#contato" (click)="Selected('contato')" class="menu-link">
-            <span class="menu-icon">
+        <li class="menu-item" [class.active]="item === 'contato'" role="none">
+          <a href="#contato" (click)="Selected('contato')" class="menu-link" role="menuitem">
+            <span class="menu-icon" aria-hidden="true">
               <i class="fa-solid fa-envelope"></i>
             </span>
             <span class="menu-text">Contato</span>
-            <div class="menu-indicator"></div>
+            <div class="menu-indicator" aria-hidden="true"></div>
           </a>
         </li>
       </ul>
     </div>
 
     <!-- Mobile Menu Toggle -->
-    <div class="mobile-toggle" (click)="toggleMobileMenu()" data-anime="scale-up">
-      <span class="toggle-line" [class.active]="mobileMenuOpen"></span>
-      <span class="toggle-line" [class.active]="mobileMenuOpen"></span>
-      <span class="toggle-line" [class.active]="mobileMenuOpen"></span>
-    </div>
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" data-anime="scale-up" 
+            aria-label="Abrir menu mobile" [attr.aria-expanded]="mobileMenuOpen">
+      <span class="toggle-line" [class.active]="mobileMenuOpen" aria-hidden="true"></span>
+      <span class="toggle-line" [class.active]="mobileMenuOpen" aria-hidden="true"></span>
+      <span class="toggle-line" [class.active]="mobileMenuOpen" aria-hidden="true"></span>
+    </button>
   </div>
 
   <!-- Mobile Menu Overlay -->

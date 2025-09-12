@@ -44,6 +44,10 @@
         border-radius: 50%;
         box-shadow: 0 0 10px var(--accent-color);
         animation: float 15s infinite linear;
+        will-change: transform;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        contain: layout style paint;
 
         &:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
         &:nth-child(2) { top: 80%; left: 20%; animation-delay: -2s; }
@@ -65,7 +69,12 @@
     padding: 0 var(--container-padding);
     z-index: 2;
   }
-
+category-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
   // Section Header
   .skills-header {
     position: relative;
@@ -279,6 +288,11 @@
       opacity: 0;
       transition: opacity 0.3s ease;
       z-index: 1;
+      will-change: opacity, transform;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      contain: layout style paint;
+      pointer-events: none;
     }
   }
 

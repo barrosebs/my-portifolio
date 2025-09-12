@@ -1,10 +1,10 @@
 <main id="main" class="futuristic-main">
   <!-- Scroll to Top Button -->
-  <div class="scroll-to-top" data-anime="scale-up">
+  <aside class="scroll-to-top" data-anime="scale-up" aria-label="Botão voltar ao topo">
     <a href="#inicio" title="Voltar ao topo" class="scroll-btn">
       <i class="fa-solid fa-rocket"></i>
     </a>
-  </div>
+  </aside>
 
   <!-- Navigation Header -->
   <app-header></app-header>
@@ -12,7 +12,7 @@
   <!-- Hero Section -->
   <section id="inicio" class="hero-section">
     <!-- Animated Background Elements -->
-    <div class="bg-elements">
+    <div class="bg-elements" aria-hidden="true">
       <div class="floating-orb orb-1"></div>
       <div class="floating-orb orb-2"></div>
       <div class="floating-orb orb-3"></div>
@@ -21,16 +21,16 @@
     <!-- Main Content Grid -->
     <div class="hero-grid container">
       <!-- Profile Avatar -->
-      <div class="profile-avatar" data-anime="scale-up">
+      <figure class="profile-avatar" data-anime="scale-up">
         <div class="avatar-container">
           <img src="../../../../assets/images/webp/profile_eduardo.webp" alt="Eduardo Barros - Desenvolvedor" class="avatar-img">
-          <div class="avatar-glow"></div>
+          <div class="avatar-glow" aria-hidden="true"></div>
         </div>
-      </div>
+      </figure>
 
       <!-- Main Content -->
-      <div class="hero-content">
-        <div class="intro-text" data-anime="fade-up">
+      <article class="hero-content">
+        <header class="intro-text" data-anime="fade-up">
           <span class="greeting">Olá, eu sou</span>
           <h1 class="name-title">Eduardo Barros</h1>
           <h2 class="role-title">Desenvolvedor Full Stack</h2>
@@ -38,10 +38,10 @@
             Bacharel em Sistemas de Informação com mais de 7 anos de experiência 
             criando soluções digitais inovadoras e interfaces futuristas.
           </p>
-        </div>
+        </header>
 
         <!-- Action Buttons -->
-        <div class="hero-actions" data-anime="fade-up">
+        <nav class="hero-actions" data-anime="fade-up" aria-label="Navegação principal">
           <a href="#portfolio" class="btn btn-primary">
             <span>Ver Projetos</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -50,10 +50,10 @@
             <span>Sobre Mim</span>
             <i class="fa-solid fa-user"></i>
           </a>
-        </div>
+        </nav>
 
         <!-- Contact Info -->
-        <div class="contact-info" data-anime="fade-up">
+        <address class="contact-info" data-anime="fade-up">
           <div class="contact-item">
             <a href="mailto:barrosebs@gmail.com" class="contact-link">
               <i class="fa-solid fa-envelope"></i>
@@ -66,10 +66,10 @@
               <span>+55 71 99640-7566</span>
             </a>
           </div>
-        </div>
+        </address>
 
         <!-- Social Links -->
-        <div class="social-links" data-anime="fade-up">
+        <nav class="social-links" data-anime="fade-up" aria-label="Redes sociais">
           <a href="https://www.linkedin.com/in/barrosebs/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
@@ -79,15 +79,15 @@
           <a href="https://www.instagram.com/barrosebs/" target="_blank" rel="noopener" class="social-link" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-        </div>
-      </div>
+        </nav>
+      </article>
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="scroll-indicator" data-anime="fade-up">
-      <div class="scroll-line"></div>
+    <aside class="scroll-indicator" data-anime="fade-up" aria-label="Indicador de rolagem">
+      <div class="scroll-line" aria-hidden="true"></div>
       <span class="scroll-text">Role para explorar</span>
-    </div>
+    </aside>
   </section>
   <section id="sobre">
     <app-sobre></app-sobre>
