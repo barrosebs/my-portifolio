@@ -298,6 +298,18 @@ body {
 
 /* Staggered Animation Delays */
 .animate-delay-100 { animation-delay: 0.1s; }
+
+/* Quick Actions */
+.quick-actions { margin-top: var(--spacing-lg); }
+.quick-actions h4 { margin-bottom: var(--spacing-sm); color: var(--text-secondary); }
+.actions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--spacing-sm); }
+.action-card { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: var(--radius-md); text-decoration: none; color: var(--text-primary); background: var(--bg-glass); border: 1px solid rgba(0, 245, 255, 0.15); transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast); }
+.action-card i { font-size: 18px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+.action-card:hover { transform: translateY(-2px) translateZ(0); border-color: var(--primary-cyan); background: rgba(0, 245, 255, 0.12); }
+.whatsapp-action i { background: #25D366; color: #0a0a0a; }
+.email-action i { background: #7877c6; }
+.cv-action i { background: #00ffff; color: #0a0a0a; }
+@media (max-width: 768px) { .actions-grid { grid-template-columns: 1fr; } }
 .animate-delay-200 { animation-delay: 0.2s; }
 .animate-delay-300 { animation-delay: 0.3s; }
 .animate-delay-400 { animation-delay: 0.4s; }
